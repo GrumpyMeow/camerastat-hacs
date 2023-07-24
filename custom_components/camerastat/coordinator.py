@@ -40,7 +40,6 @@ class CameraStatCoordinator(DataUpdateCoordinator):
             identifiers={(DOMAIN, config_entry.entry_id)},
             name=config_entry.title
         )
-        self.async_set_updated_data(dict())
    
     async def _async_update_data(self) -> dict:
         """Fetch the data from the device."""
