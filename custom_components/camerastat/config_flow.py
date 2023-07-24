@@ -24,7 +24,7 @@ STEP_USER_DATA_SCHEMA = vol.Schema(
         vol.Required(CONF_ENTITY_ID): selector.EntitySelector(
             selector.EntitySelectorConfig(domain=CAMERA_DOMAIN)
         ),
-        vol.Required(CONF_SCAN_INTERVAL, default=600): vol.All(
+        vol.Required(CONF_SCAN_INTERVAL, default=60): vol.All(
             vol.Coerce(int), vol.Range(min=5, max = 86400)
         )
     }
@@ -51,6 +51,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         _LOGGER.debug(camera_entity_entry)
 
         return self.async_create_entry(
-            title=f"Camera statistic for {camera_entity_entry.name}",
+            title=f"Statistic for {camera_entity_entry.name}",
             data=user_input            
         )
