@@ -10,7 +10,7 @@ The default update interval is 10 minutes (600 seconds).
 
 Current issues:
 * Initially the sensors will have no value, but they should be populated at the first update
-* The entity names have an incorrect name like: "camera_statistic_for_none_camera_statistic_for_none_b_mean"
+* The entity names have an incorrect name like: "camera_statistic_for_none_camera_statistic_for_none_b_mean". This is caused that the selected camera entity does not have a name defined. You can do this via the Home Assistant gui.
 * An icon would be nice
 
 Tips/notes:
