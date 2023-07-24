@@ -1,5 +1,5 @@
 # Camera Statistic
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
+
 A HACS custom Home Assistant integration to get statistic from a camera image.
 It uses the [ImageStat](https://pillow.readthedocs.io/en/stable/reference/ImageStat.html) operation from Pillow.
 
