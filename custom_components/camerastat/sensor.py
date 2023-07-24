@@ -2,7 +2,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable
-from homeassistant.components.camerastat.coordinator import CameraStatCoordinator
+from .coordinator import CameraStatCoordinator
 
 from homeassistant.components.sensor import SensorEntity, SensorEntityDescription
 from homeassistant.components.sensor.const import SensorStateClass
