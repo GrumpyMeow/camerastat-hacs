@@ -6,4 +6,9 @@ I created this integration as i wanted to have automation switch from day <-> ni
 
 This integration should also make it possible to check if your red ferrari is parked on your drive way.
 
+The default update interval is 10 minutes (600 seconds). 
 
+Current issues:
+* Initially the sensors will have no value, but they should be populated at the first update
+* The entity names have an incorrect name like: "camera_statistic_for_none_camera_statistic_for_none_b_mean"
+* An icon would be nice
