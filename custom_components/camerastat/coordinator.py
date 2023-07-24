@@ -2,7 +2,7 @@
 from datetime import timedelta
 from io import BytesIO, StringIO
 import logging
-from homeassistant.components.camerastat.const import BANDS, DOMAIN
+from .const import BANDS, DOMAIN
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
