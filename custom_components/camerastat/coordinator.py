@@ -12,6 +12,7 @@ from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.const import CONF_ENTITY_ID, CONF_SCAN_INTERVAL
 from homeassistant.helpers.update_coordinator import (
     DataUpdateCoordinator,
+UpdateFailed,
 )
 from homeassistant.components.camera import Image
 from PIL import ImageStat, Image as PImage
@@ -72,6 +73,7 @@ class CameraStatCoordinator(DataUpdateCoordinator):
 
         except HomeAssistantError as err:
             _LOGGER.error("Error on receive image from entity: %s", err)
-            return data
+            raise UpdateFailed(f"Error communicating with API: {err}")
+
 
         
