@@ -124,7 +124,7 @@ class CameraStatSensorEntity(CoordinatorEntity, SensorEntity):
         #self._attr_unique_id = description.key
         self._attr_unique_id = f"{coordinator.device_id}_{description.key}"
         self._attr_device_info = coordinator.device_info
-        #self._attr_native_value = description.value(coordinator.data, self.entity_description.key)
+        self._attr_native_value = description.value(coordinator.data, self.entity_description.key)
 
 
         
