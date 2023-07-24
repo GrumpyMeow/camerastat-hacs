@@ -48,7 +48,6 @@ async def async_setup_entry(
                 CameraStatEntityDescription(
                     key=f"{band}_MEAN",
                     name=f"{name} {band} mean",
-                    native_unit_of_measurement=PERCENTAGE,
                     state_class=SensorStateClass.MEASUREMENT,
                     value=lambda data,key : data.get(key),
                     suggested_display_precision=0,
@@ -121,7 +120,6 @@ class CameraStatSensorEntity(CoordinatorEntity, SensorEntity):
         """Initialize Camera Statistic Sensor."""
         super().__init__(coordinator=coordinator)
         self.entity_description: CameraStatEntityDescription = description
-        #self._attr_unique_id = description.key
         self._attr_unique_id = f"{coordinator.device_id}_{description.key}"
         self._attr_device_info = coordinator.device_info
         self._attr_native_value = description.value(coordinator.data, self.entity_description.key)
