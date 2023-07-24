@@ -1,0 +1,15 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "entity_id": "[%key:common::config_flow::data::entity_id%]",
+          "update_interval": "[%key:common::config_flow::data::update_interval%]",
+        }
+      }
+    },
+    "error": {
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    }
+  }
+}
