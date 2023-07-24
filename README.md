@@ -12,3 +12,8 @@ Current issues:
 * Initially the sensors will have no value, but they should be populated at the first update
 * The entity names have an incorrect name like: "camera_statistic_for_none_camera_statistic_for_none_b_mean"
 * An icon would be nice
+
+Tips/notes:
+* If your camera provides a substream, use that one. This should reduce the resource utilitzation.
+* The fastest update-interval is 5seconds. This to not introduce stability issues.
+* Be aware that storing all sensor-values will significantly increase the size of your Home Assistant database. You should disable sensors which you are not interested in.
