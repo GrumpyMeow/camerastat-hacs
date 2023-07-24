@@ -32,4 +32,3 @@ Tips/notes:
      entity_id: >-
        sensor.camera_statistic_for_voortuin_substream_camera_statistic_for_voortuin_substream_b_mean
   ```
-
